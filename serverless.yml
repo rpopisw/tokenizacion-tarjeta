@@ -1,0 +1,25 @@
+service: tokenizacion_tarjeta
+
+frameworkVersion: '2'
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: personal
+  stage: dev
+  region: us-west-2
+
+functions:
+  create-token-card:
+    handler: src/infra/controller/card.createTokenCard
+    description: Lambda function just for article purposes - to show sls offline
+    memorySize: 256
+    events:
+      - http:
+          path: /card
+          method: post
+          cors: true
