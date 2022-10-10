@@ -1,7 +1,5 @@
 service: tokenizacion_tarjeta
 
-frameworkVersion: '2'
-
 plugins:
   - serverless-offline
   - serverless-plugin-typescript
@@ -16,10 +14,19 @@ provider:
 functions:
   create-token-card:
     handler: src/infra/controller/card.createTokenCard
-    description: Lambda function just for article purposes - to show sls offline
+    description: Lambda function
     memorySize: 256
     events:
       - http:
           path: /card
           method: post
           cors: true
+  get-commerce-by-pk:
+    handler: src/infra/controller/commerce.validateCommerceByPK
+    description: Lambda function
+    memorySize: 256
+    events:
+      - http:
+          path: /commerce
+          method: post
+          cors: true          
