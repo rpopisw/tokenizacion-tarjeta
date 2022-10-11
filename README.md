@@ -145,5 +145,5 @@ _Below is an example of how you can instruct your audience on installing and set
   ```sh
   npm run deploy:dev
   ```  
-  ![Screen Shot 2022-10-11 at 11 56 20](https://user-images.githubusercontent.com/69777661/195153626-4676f958-0c49-435d-98d4-b62796f44297.png)
+![Screen Shot 2022-10-11 at 11 57 05](https://user-images.githubusercontent.com/69777661/195153813-f9e35ff3-6005-4808-b6cd-e57d13ca5f31.png)
 
