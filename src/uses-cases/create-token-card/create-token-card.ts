@@ -9,7 +9,8 @@ export class CreateTokenCardUseCase {
   ) {}
     async execute(card: Card,pk:string): Promise<{msg:string , tokken: string}| {msg:string}> {
       card.pk = pk;
-      card.tokken = this.generateTokkenUnique();
+      const tokken = this.generateTokkenUnique();
+      card.tokken = tokken;
       await this.cardRepository.saveCard(card);
       const commerce = await this.commerceService.getCommerceByPk(pk);
       if(!commerce){
@@ -21,7 +22,7 @@ export class CreateTokenCardUseCase {
       };
     }
 
-    generateTokkenUnique() {
+    generateTokkenUnique():string {
       const random =  
       Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
       const tokken = random.substring(0, 16);
