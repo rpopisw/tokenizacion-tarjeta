@@ -8,8 +8,8 @@ class GetCardByTokkenUseCase {
         this.commerceService = commerceService;
     }
     async execute(tokken, pk) {
-        const commerceService = await this.commerceService.getCommerceByPk(pk);
-        if (!commerceService) {
+        const commerce = await this.commerceService.getCommerceByPk(pk);
+        if (!commerce) {
             return { msg: "Commerce not found" };
         }
         const card = await this.cardRepository.getCardByToken(tokken, pk);

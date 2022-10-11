@@ -8,7 +8,8 @@ class CreateTokenCardUseCase {
     }
     async execute(card, pk) {
         card.pk = pk;
-        card.tokken = this.generateTokkenUnique();
+        const tokken = this.generateTokkenUnique();
+        card.tokken = tokken;
         await this.cardRepository.saveCard(card);
         const commerce = await this.commerceService.getCommerceByPk(pk);
         if (!commerce) {
