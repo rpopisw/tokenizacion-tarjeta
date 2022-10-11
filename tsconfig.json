@@ -25,7 +25,7 @@
     "strictNullChecks": true
   },
   "include": [
-    "./src",
+    "./src", "1665374463970-commerce.ts",
   ],
   "exclude": [
     "./dist",
