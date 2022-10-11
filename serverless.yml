@@ -1,4 +1,4 @@
-service: tokenizacion_tarjeta
+service: tokenizacionTarjeta
 
 plugins:
   - serverless-offline
@@ -21,6 +21,15 @@ functions:
           path: /card
           method: post
           cors: true
+  get-card-by-tokken:
+    handler: src/infra/controller/card.getCardByTokken
+    description: Lambda function
+    memorySize: 256
+    events:
+      - http:
+          path: /card/tokken
+          method: post
+          cors: true          
   get-commerce-by-pk:
     handler: src/infra/controller/commerce.validateCommerceByPK
     description: Lambda function
