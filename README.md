@@ -3,7 +3,8 @@
 <div align="center">
   <h3 align="center">TOKENIZACION TARJETA</h3>
 </div>
-
+<br />
+<br />
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Contenido</summary>
@@ -22,6 +23,7 @@
       </ul>
     </li>
     <li><a href="#uso">Usos</a></li>
+      <li><a href="#post">Postman</a></li>
   </ol>
 </details>
 
@@ -147,3 +149,7 @@ _Below is an example of how you can instruct your audience on installing and set
   ```  
 ![Screen Shot 2022-10-11 at 11 57 05](https://user-images.githubusercontent.com/69777661/195153813-f9e35ff3-6005-4808-b6cd-e57d13ca5f31.png)
 
+<!-- Postman -->
+<a name="post"/></a>  
+## Postman 
+Descargar [https://www.getpostman.com/collections/33b4027bb730696fb6e9](https://www.getpostman.com/collections/33b4027bb730696fb6e9)
